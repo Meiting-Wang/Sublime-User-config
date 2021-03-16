@@ -1,0 +1,63 @@
+{
+	/* With this setting, an extra line is added when the file is saved (just as in Stata's own do-file editor).
+	Without an extra line, the last line of code will not be run in Stata. However, when running
+	code directly from the active window in Sublime Text, the last line will always be included,
+	even when the file is not saved at all, and regardless of this setting. */
+
+	"ensure_newline_at_eof_on_save": true,
+
+	/* This is the path where Sublime Text will be looking for Stata to launch. For this package to work properly,
+	this path must correspond to where your Stata distribution is installed. To change the path, go to
+	Preferences -> Package Settings -> StataEditor -> Settings - User, copy this line of code, change the path and save. */
+
+	"stata_path": "D:/stata16/StataMP-64.exe",
+
+	/* Current Stata version. This makes sure Sublime Text is sending code with the correct encoding to Stata.
+	Windows-1252 is used for Stata 13 and earlier, while utf-8 is used for Stata 14. */
+
+	"stata_version": 16,
+
+	/* This setting is only for versions 13 and older. Change to appropriate encoding if needed.
+	For example, if you use a Chinese version of Stata, change encoding to "gbk". */
+
+	"character_encoding": "windows-1252",
+
+	/* With this setting, all variables in the active Stata connection is available in the completion
+	dropdown menu. Change the setting to false to turn it off. */
+
+	"variable_completions": true,
+
+	/* With this setting, Stata functions are available in the completion dropdown menu.
+	Change the setting to true to turn it on. */
+
+	"function_completions": true,
+
+	/* With this setting, Stata commands are available in the completion dropdown menu.
+	Change the setting to true to turn it on. */
+
+	"command_completions": true,
+
+	/* Setting the directory in Stata when an initial connection to Stata is established.
+	The default ("current_path") is to set it to the path of where the current file is located.
+	Alternatively, setting the option to "project_path" sets the path where the active Sublime
+	project is located. Finally, it is possible to set a custom path (using forward slashes
+	instead of backslashes). */
+
+	"default_path": "current_path",
+
+	/* This setting is experimental. It allows for completions of files with given file extensions
+	in the project folder(s). The file completion will be relative to the project path.
+	Note that with folders containing huge amount of files, this can lead to memory leaks.
+	If so, simply change the setting to "false". To enable file completions, enter the
+	file extensions you wish to be enabled separated by commas. Example:
+	"file_completions": "dta, do, ado" */
+
+	"file_completions": false,
+
+	/* This setting is the waiting time in seconds from that Stata is launched until
+	the commands are being sent. With zero waiting time, Stata may be launced twice.
+	Only for Stata 15 and later. Change waiting time as needed. */
+
+	"waiting_time": 0.5
+	
+}
